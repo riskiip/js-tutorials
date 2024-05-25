@@ -16,3 +16,25 @@ function autoIncrement() {
 function showTotal() {
   return window.alert(myNumber);
 }
+
+function calculation() {
+  let firstNum = parseInt(document.getElementById("firstNum").value);
+  let secondNum = parseInt(document.getElementById("secondNum").value);
+  let operators = document.getElementById("dropdownOperators").value;
+  let value = 0;
+  switch (operators) {
+    case "+":
+      value = firstNum + secondNum;
+      break;
+    case "-":
+      value = firstNum - secondNum;
+      break;
+    case "*":
+      value = firstNum * secondNum;
+      break;
+    default:
+      value = firstNum / secondNum;
+      break;
+  }
+  document.getElementById("result").innerHTML = value;
+}

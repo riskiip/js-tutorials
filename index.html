@@ -9,11 +9,33 @@
   </head>
   <body>
     <!-- Printing / Output from Javascript -->
+    <h2>Theese buttons are only for show output</h2>
     <button onclick="printWithAlert()">Print using alert</button>
     <button onclick="printWithConsole()">Print using console.log</button>
 
+    <br />
+
     <!-- Increment 1 every click button -->
+    <h2>Theese buttons are for increment number from 1</h2>
     <button onclick="autoIncrement()">Increment by 1</button>
     <button onclick="showTotal()">Show total click</button>
+
+    <br />
+
+    <!-- Arithmatic Operators & Switch Case Condition -->
+    <h2>This is a simple calculator</h2>
+    <form>
+      <input type="number" placeholder="Insert 1st number" id="firstNum" />
+      <input type="number" placeholder="Insert 2nd number" id="secondNum" />
+      <select name="dropdownOperators" id="dropdownOperators">
+        <option value="+">Add</option>
+        <option value="-">Substract</option>
+        <option value="*">Times</option>
+        <option value="/">Divided</option>
+      </select>
+    </form>
+    <br />
+    <button onclick="calculation()">Calculate!</button> <br />
+    <p id="result"></p>
   </body>
 </html>
