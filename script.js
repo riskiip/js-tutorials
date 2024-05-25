@@ -1,4 +1,12 @@
 let myNumber = 1;
+let carObj = {
+  merk: "Toyota Avanza",
+  color: "Black",
+  owner: "John Doe",
+  year: 2011,
+  capacity: 7,
+};
+let hideTable = true;
 
 function printWithAlert() {
   window.alert("Hello World with alert");
@@ -91,4 +99,18 @@ function primeNumber() {
       console.log(i, "is not a prime number");
     }
   }
+}
+
+function printCarObj() {
+  hideTable = !hideTable;
+  if (!hideTable) {
+    document.getElementById("tableCar").style.display = "block";
+  } else {
+    document.getElementById("tableCar").style.display = "none";
+  }
+  document.getElementById("merkCarObj").innerHTML = carObj.merk;
+  document.getElementById("colorCarObj").innerHTML = carObj.color;
+  document.getElementById("ownerCarObj").innerHTML = carObj.owner;
+  document.getElementById("yearCarObj").innerHTML = carObj.year;
+  document.getElementById("capacityCarObj").innerHTML = carObj.capacity;
 }
