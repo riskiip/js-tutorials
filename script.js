@@ -52,3 +52,43 @@ function compareNumber() {
   }
   document.getElementById("resultComparison").innerHTML = value;
 }
+
+function summarizeNumber() {
+  let initNumber = 0,
+    summary = 0;
+
+  while (initNumber >= 0) {
+    summary += initNumber;
+    initNumber = parseInt(prompt("Enter some number"));
+  }
+  console.log("The result is " + summary);
+}
+
+function doWhileGenerator() {
+  let target = document.getElementById("targetParagraph"),
+    initNum = 1;
+  do {
+    target.innerHTML += "Automated generated " + initNum + " paragraph <br/>";
+    initNum++;
+  } while (initNum <= 5);
+  target.innerHTML += "Stop";
+}
+
+function primeNumber() {
+  let totalPrimeNumber = 0;
+  for (let i = 1; i <= 20; i++) {
+    let prime = i > 1;
+    for (let j = 2; j <= Math.sqrt(i); j++) {
+      if (i % j == 0) {
+        prime = false;
+        break;
+      }
+    }
+    if (prime) {
+      console.log(i, "is a prime number");
+      totalPrimeNumber += 1;
+    } else {
+      console.log(i, "is not a prime number");
+    }
+  }
+}
